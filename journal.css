@@ -17,4 +17,9 @@
 .lake-finale .art-2 .day-art{background-position:left center}
 .sandimen .art-1 .day-art{background-position:center center}
 .sandimen .art-2 .day-art{background-position:right center}
+.yilan .poster-day .day-art{background-image:url('assets/yilan-anniversary-watercolor.webp');background-size:300% auto;background-repeat:no-repeat}
+.yilan .art-0 .day-art{background-position:left center}
+.yilan .art-1 .day-art{background-position:center center}
+.yilan .art-2 .day-art{background-position:right center}
+@media print{.yilan .day-art{height:120px}.yilan .poster-route button{padding-top:3px;padding-bottom:3px;min-height:30px}.yilan .route-name{font-size:13px}.yilan .route-name small{font-size:9px}.yilan .poster-day-title h2{font-size:16px}}
 @media print{.sandimen .day-art{height:125px}.sandimen .poster-route button{padding-top:2px;padding-bottom:2px;min-height:29px}.sandimen .route-name{font-size:13px}.sandimen .route-name small{font-size:9px}.sandimen .poster-day-title h2{font-size:16px}}

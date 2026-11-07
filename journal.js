@@ -5,9 +5,9 @@ function itemIcon(i){return i.kind==='景點'?'✦':i.kind==='餐廳'?'♧':i.ki
 function renderJournal(t,dates,{readOnly=false}={}){
   const highlights=d=>{const all=dayItems(t,d);const selected=all.filter(i=>i.kind==='景點'||i.kind==='長途交通'||(i.kind==='餐廳'&&i.budget));return selected.length?selected:all.slice(0,5);};
   const novelty=t.items.filter(i=>!i.deleted&&i.novelty).length;
-  const hasArt=['kaohsiung','kenting','anniversary-kaohsiung','anniversary-kenting','anniversary-kenting-lake','anniversary-sandimen'].includes(t.cover);
+  const hasArt=['kaohsiung','kenting','anniversary-kaohsiung','anniversary-kenting','anniversary-kenting-lake','anniversary-sandimen','anniversary-yilan'].includes(t.cover);
   return `<header class="journal-heading"><div><p class="eyebrow">MY TRAVEL JOURNAL <span>／ ${esc(t.destination)}</span></p><h1>${esc(t.title)}</h1><p class="journal-subtitle">${esc(t.subtitle||'把喜歡的風景，收進生活裡。')}</p></div>${readOnly?'':'<button class="quiet" data-action="edit-trip">編輯旅程</button>'}</header>
-  <section class="travel-poster ${hasArt?'watercolor':''} ${t.cover.includes('kenting')?'kenting':''} ${t.cover.startsWith('anniversary-')?'anniversary':''} ${t.cover==='anniversary-kenting-lake'?'lake-finale':''} ${t.cover==='anniversary-sandimen'?'sandimen':''}" aria-label="旅行資訊圖表">
+  <section class="travel-poster ${hasArt?'watercolor':''} ${t.cover.includes('kenting')?'kenting':''} ${t.cover.startsWith('anniversary-')?'anniversary':''} ${t.cover==='anniversary-kenting-lake'?'lake-finale':''} ${t.cover==='anniversary-sandimen'?'sandimen':''} ${t.cover==='anniversary-yilan'?'yilan':''}" aria-label="旅行資訊圖表">
     <div class="poster-top"><span class="poster-date">${esc(t.start.replaceAll('-','.'))} — ${esc(t.end.slice(5).replace('-','.'))}</span><span>${dates.length} DAYS${novelty?` · ${novelty} 個新風景`:''}</span><span class="poster-stamp">${t.cover.startsWith('anniversary-')?'♡ 結婚紀念日':group(t)==='過往旅程'?'旅行回憶':'下一站，美好'}</span></div>
     <div class="poster-days">${dates.map((d,index)=>`<section class="poster-day art-${index%3}">
       ${hasArt?'<div class="day-art" role="img" aria-label="水彩旅行意象插畫"></div>':'<div class="day-art generic-art" aria-hidden="true">'+['☀','♧','⌂'][index%3]+'</div>'}
