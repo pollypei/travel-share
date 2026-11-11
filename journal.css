@@ -21,5 +21,43 @@
 .yilan .art-0 .day-art{background-position:left center}
 .yilan .art-1 .day-art{background-position:center center}
 .yilan .art-2 .day-art{background-position:right center}
+.options-shortcut{display:flex;align-items:center;gap:16px;margin:-6px 0 22px;font-size:15px;flex-wrap:wrap}
+.options-shortcut button,.options-nav button,.options-back{min-height:44px}
+.options-shortcut button{border:1px solid var(--line);background:var(--paper)}
+.alternatives{margin-top:48px;scroll-margin-top:24px}
+.alternatives .detail-heading{margin-bottom:14px;flex-wrap:wrap}
+.alternatives .detail-heading>span{font-size:15px}
+.options-intro,.options-return{max-width:72ch;line-height:1.8;font-size:17px}
+.options-return{background:#eef1e7;padding:16px 20px;border-radius:5px;color:#40563f}
+.options-nav{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 30px}
+.options-nav button{font-size:17px;border:1px solid var(--line);padding:8px 20px;background:var(--paper)}
+.options-nav span{margin-left:8px;font-size:14px}
+.options-group{scroll-margin-top:24px;margin-top:32px}
+.options-group>h3{font-size:23px;margin:0 0 12px;font-weight:500}
+.option-disclosure{border-top:1px solid var(--line)}
+.option-disclosure:last-child{border-bottom:1px solid var(--line)}
+.option-disclosure>summary{display:flex;align-items:flex-start;gap:24px;list-style:none;padding:22px 4px;cursor:pointer}
+.option-disclosure>summary::-webkit-details-marker{display:none}
+.option-heading{display:grid;gap:7px;flex:1;min-width:0}
+.option-heading strong{font-size:22px;font-weight:600;line-height:1.5}
+.option-feature{font-size:17px;line-height:1.7}
+.option-hours{font-size:15px;line-height:1.7;color:#465c46;font-variant-numeric:tabular-nums}
+.option-availability{font-size:15px;color:#89502f;line-height:1.65}
+.option-toggle{font-size:14px;white-space:nowrap;display:flex;align-items:center;min-height:33px}
+.option-toggle .disclosure-arrow{margin-left:8px;font-size:20px}
+.option-disclosure[open] .disclosure-arrow{transform:rotate(180deg)}
+.option-disclosure[open]>summary{padding-bottom:12px}
+.option-body{padding:0 4px 24px;max-width:78ch}
+.option-body .place-facts{margin-top:6px}
+.option-body .place-facts>div{grid-template-columns:72px minmax(0,1fr);font-size:17px;margin-top:12px;line-height:1.8}
+.option-body .place-facts dt{color:#52624c}
+.option-body .place-facts dd{white-space:pre-wrap}
+.option-body .event-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+.option-body .event-links a{display:inline-flex;align-items:center;min-height:44px;text-underline-offset:4px;overflow-wrap:anywhere;max-width:100%}
+.option-disclosure>summary:hover,.options-nav button:hover{background:#edf0e5}
+.alternatives ::selection{background:#d8e3ca;color:#243e32}
+.options-back{margin-top:22px}
+@media screen and (max-width:760px){.options-shortcut{gap:6px;font-size:14px}.options-shortcut button{font-size:16px}.alternatives{margin-top:34px}.options-return{padding:14px}.options-nav{gap:8px}.options-nav button{flex:1 0 40%;padding:8px 12px}.option-disclosure>summary{gap:10px;padding:20px 0}.option-heading strong{font-size:21px}.option-feature{font-size:16px}.option-toggle{font-size:0}.option-body{padding:0 0 22px}.option-body .place-facts>div{grid-template-columns:1fr;gap:1px;font-size:17px}.option-body .place-facts dt{font-size:14px}.option-body .event-links{font-size:15px}}
+@media print{.options-shortcut,.alternatives{display:none!important}}
 @media print{.yilan .day-art{height:120px}.yilan .poster-route button{padding-top:3px;padding-bottom:3px;min-height:30px}.yilan .route-name{font-size:13px}.yilan .route-name small{font-size:9px}.yilan .poster-day-title h2{font-size:16px}}
 @media print{.sandimen .day-art{height:125px}.sandimen .poster-route button{padding-top:2px;padding-bottom:2px;min-height:29px}.sandimen .route-name{font-size:13px}.sandimen .route-name small{font-size:9px}.sandimen .poster-day-title h2{font-size:16px}}
